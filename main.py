@@ -56,9 +56,9 @@ def get_emails():
                         subject = header['value']
                     if  header["name"] == "From":
                         sender = header["value"]
-                notification = Notification(app_id = "New Email", title = sender, msg = subject, duration = "long", icon = r"C:\Users\ASUS\Desktop\Email PopUp\gmail-icon.png")   
+                notification = Notification(app_id = "New Email", title = sender, msg = subject, duration = "long", icon = r"FULL PATH TO ICON")   
                 notification.set_audio(audio.SMS, loop=False);
-                notification.add_actions(label="Open Email", launch="https://mail.google.com/mail/u/0/#inbox")
+                notification.add_actions(label="Open Email", launch="PATH TO EMAIL INBOX")
                 notification.show()
                 print("Labels:", msg["labelIds"])            
                 print('Message Subject:', subject)
